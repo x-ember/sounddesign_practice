@@ -1,5 +1,5 @@
 # sounddesign_practice
-Personal practise of sound design
+Personal practise of sound design （持续更新中）
 
 1. 怀旧回忆风钢琴片段.wav
    使用Reaper处理个人在三角琴上即兴创作弹奏的录音片段。过程中先后使用Reafir降噪、Volume自动化曲线、ReaVerbate、ReaLimit，呈现出琴声由远及近、由模糊到清晰，从空旷的空间移至逼近的面前，略带伤感的旋律被强调再逐渐淡出，烘托出怀念往事和陷入思绪中的略带伤感的氛围。在构思中，整个过程试图模拟这样的场景：人物在空旷空间里听见远处传来若有若无的琴声后，被怀旧又伤感的曲风吸引，顺着声音寻找发声源，跟随演奏者逐渐陷入沉思与回忆。
