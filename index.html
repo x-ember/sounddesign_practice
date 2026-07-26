@@ -34,8 +34,6 @@
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
   .wrap{max-width:1020px; margin:0 auto; padding:0 28px}
-
-  /* ---------- header ---------- */
   header{padding:88px 0 36px; border-bottom:1px solid var(--line)}
   .eyebrow{font-family:var(--mono); font-size:12px; letter-spacing:.32em; text-transform:uppercase; color:var(--signal); display:flex; align-items:center; gap:10px}
   .eyebrow::before{content:""; width:8px; height:8px; border-radius:50%; background:var(--signal); box-shadow:0 0 12px var(--signal); animation:blink 2.4s ease-in-out infinite}
@@ -46,14 +44,17 @@
   .toolbar{display:flex; flex-wrap:wrap; gap:10px; margin-top:26px; align-items:center}
   .tool{font-family:var(--mono); font-size:12.5px; color:var(--text); border:1px solid var(--line); background:var(--panel); padding:7px 13px; border-radius:6px}
   .tool b{color:var(--signal); font-weight:600}
-
   .scope{margin-top:34px; border:1px solid var(--line); border-radius:12px; background:linear-gradient(180deg,var(--panel),#101015); padding:18px 20px; overflow:hidden}
   .scope__top{display:flex; justify-content:space-between; align-items:center; font-family:var(--mono); font-size:11.5px; color:var(--dim); letter-spacing:.18em; text-transform:uppercase}
   .scope svg{width:100%; height:96px; display:block; margin-top:8px}
   .scope path.curve{fill:none; stroke:var(--signal); stroke-width:2.5; stroke-linecap:round; stroke-dasharray:1200; stroke-dashoffset:1200; animation:draw 2.6s 0.4s ease forwards}
   @keyframes draw{to{stroke-dashoffset:0}}
-
-  /* ---------- projects ---------- */
+  .section-header{
+    padding:48px 0 24px; font-family:var(--mono); font-size:11.5px;
+    letter-spacing:.28em; text-transform:uppercase; color:var(--signal);
+    display:flex; align-items:center; gap:14px;
+  }
+  .section-header::after{content:""; flex:1; height:1px; background:var(--line)}
   main{padding:14px 0 40px}
   .track{
     display:grid; grid-template-columns:120px 1fr; gap:30px;
@@ -72,12 +73,10 @@
   .meter span:nth-child(3){height:55%; animation-delay:.45s}
   .meter span:nth-child(4){height:90%; animation-delay:.1s}
   @keyframes vu{0%,100%{transform:scaleY(.55); transform-origin:bottom}50%{transform:scaleY(1); transform-origin:bottom}}
-
   .title{font-family:var(--disp); font-weight:700; font-size:clamp(20px,2.4vw,27px); line-height:1.18; letter-spacing:-.01em}
   .title .cn{color:var(--signal)}
   .stack{font-family:var(--mono); font-size:12.5px; color:var(--dim); letter-spacing:.12em; text-transform:uppercase; margin-top:8px}
   .desc{color:var(--muted); margin-top:14px; max-width:70ch}
-
   .block{margin-top:20px; border-left:2px solid var(--line); padding-left:18px}
   .block__h{font-family:var(--mono); font-size:11.5px; letter-spacing:.22em; text-transform:uppercase; color:var(--signal); margin-bottom:10px}
   .patch{list-style:none; display:grid; gap:11px}
@@ -85,37 +84,18 @@
   .patch code{font-family:var(--mono); font-size:12.5px; color:var(--text); background:var(--panel-2); border:1px solid var(--line); padding:2px 8px; border-radius:5px; white-space:nowrap}
   .patch .arr{color:var(--signal); margin:0 10px; font-family:var(--mono)}
   .block p{color:var(--muted); font-size:14.5px}
-
   .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:22px}
   .chip{font-family:var(--mono); font-size:11.5px; color:var(--muted); border:1px solid var(--line); padding:4px 11px; border-radius:20px; background:var(--panel)}
-
   .cues{display:flex; flex-wrap:wrap; gap:10px; margin-top:20px}
-  .cue{
-    display:inline-flex; align-items:center; gap:9px; font-family:var(--mono); font-size:13px;
-    color:var(--text); text-decoration:none; border:1px solid var(--line);
-    background:var(--panel); padding:9px 15px; border-radius:8px; transition:.18s;
-  }
+  .cue{display:inline-flex; align-items:center; gap:9px; font-family:var(--mono); font-size:13px; color:var(--text); text-decoration:none; border:1px solid var(--line); background:var(--panel); padding:9px 15px; border-radius:8px; transition:.18s}
   .cue .ico{display:grid; place-items:center; width:18px; height:18px; border-radius:50%; background:var(--signal-soft); color:var(--signal); font-size:9px}
   .cue:hover{border-color:var(--signal); background:#1f1611; transform:translateY(-1px)}
   .cue--doc{color:var(--muted)}
   .cue--doc .ico{background:#ffffff10; color:var(--muted)}
-
-  /* bilibili embeds */
   .embeds{display:grid; gap:20px; margin-top:22px}
-  .embed-block{}
   .embed-label{font-family:var(--mono); font-size:11.5px; color:var(--dim); letter-spacing:.16em; text-transform:uppercase; margin-bottom:8px}
   .embed-wrap{position:relative; width:100%; padding-bottom:56.25%; border-radius:10px; overflow:hidden; border:1px solid var(--line)}
   .embed-wrap iframe{position:absolute; top:0; left:0; width:100%; height:100%; border:none}
-
-  /* audio players */
-  .players{display:grid; gap:16px; margin-top:22px; max-width:640px}
-  .player{border:1px solid var(--line); border-radius:10px; background:linear-gradient(180deg,var(--panel),#101015); padding:14px 16px}
-  .player__h{display:flex; justify-content:space-between; align-items:center; margin-bottom:10px}
-  .player__name{font-family:var(--disp); font-weight:700; font-size:15px}
-  .player__tag{font-family:var(--mono); font-size:11px; color:var(--signal); letter-spacing:.16em; text-transform:uppercase}
-  audio{width:100%; height:38px; filter:grayscale(.2) contrast(1.05)}
-
-  /* ---------- contact ---------- */
   footer{padding:64px 0 96px}
   .contact{border:1px solid var(--line); border-radius:14px; background:linear-gradient(180deg,var(--panel),#101015); padding:38px 34px}
   .contact h2{font-family:var(--disp); font-weight:800; font-size:clamp(26px,4vw,40px); letter-spacing:-.01em}
@@ -124,7 +104,6 @@
   .links a{font-family:var(--mono); font-size:13.5px; color:var(--text); text-decoration:none; border:1px solid var(--line); padding:11px 17px; border-radius:8px; background:var(--panel); transition:.18s}
   .links a:hover{border-color:var(--signal); color:var(--signal)}
   .colophon{font-family:var(--mono); font-size:11px; color:var(--dim); letter-spacing:.18em; text-transform:uppercase; margin-top:40px; text-align:center}
-
   @media(max-width:680px){
     .track{grid-template-columns:1fr; gap:14px}
     .rail{flex-direction:row; align-items:center; gap:18px}
@@ -148,7 +127,6 @@
       <span class="tool"><b>Middleware</b> &nbsp;Wwise</span>
       <span class="tool"><b>Engine</b> &nbsp;Unity</span>
     </div>
-
     <div class="scope">
       <div class="scope__top"><span>RTPC · HP → Music Layers</span><span>0 — 100</span></div>
       <svg viewBox="0 0 1000 96" preserveAspectRatio="none">
@@ -159,14 +137,66 @@
 
   <main>
 
-    <!-- 01 冰与铁 -->
+    <div class="section-header">Professional Experience</div>
+
+    <!-- 01 CiGA -->
     <article class="track" style="--i:1">
       <div class="rail"><div class="no"><small>0</small>1</div><div class="meter"><span></span><span></span><span></span><span></span></div></div>
+      <div class="body">
+        <h2 class="title"><span class="cn">《猫锚猫》</span>—— CiGA GameJam 2026</h2>
+        <div class="stack">Game Jam · Audio Designer</div>
+        <p class="desc">48小时内与程序、美术、策划协作完成完整游戏原型。玩家控制船只与猫猫锚，锚准并救起落水的猫猫。负责游戏全部音乐与音效设计。</p>
+        <div class="block">
+          <div class="block__h">Contribution</div>
+          <ul class="patch">
+            <li><code>音效设计</code><span class="arr">→</span>从零设计游戏所有交互音效，包括碰撞反馈、角色动作与UI音效。</li>
+            <li><code>音乐创作</code><span class="arr">→</span>创作符合游戏基调的背景音乐，配合游戏节奏与视觉风格。</li>
+            <li><code>团队协作</code><span class="arr">→</span>在48小时时间限制内完成交付，与跨职能团队实时沟通迭代。</li>
+          </ul>
+        </div>
+        <div class="chips"><span class="chip">Ableton Live</span><span class="chip">Game Jam</span><span class="chip">Sound Design</span><span class="chip">Music</span></div>
+        <div class="embeds">
+          <div class="embed-block">
+            <div class="embed-label">Demo</div>
+            <div class="embed-wrap">
+              <iframe src="//player.bilibili.com/player.html?bvid=BV17BTy66ETz&autoplay=0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="cues" style="margin-top:16px">
+          <a class="cue" href="https://www.gmhub.com/game/10353" target="_blank"><span class="ico">↗</span>GMHub 作品页</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 02 GGJ -->
+    <article class="track" style="--i:2">
+      <div class="rail"><div class="no"><small>0</small>2</div><div class="meter"><span></span><span></span><span></span><span></span></div></div>
+      <div class="body">
+        <h2 class="title">GGJ Micro Missions — Selected Audio Creator</h2>
+        <div class="stack">Commissioned Music · 2026</div>
+        <p class="desc">基于工作室需求说明书 (Brief) 创作可循环背景音乐，在众多提交作品中被选中并获得授权使用。音乐用于一款节奏紧凑的街机风格游戏，需匹配快速弹出目标的游戏能量与节奏。</p>
+        <div class="block">
+          <div class="block__h">Details</div>
+          <ul class="patch">
+            <li><code>类型</code><span class="arr">→</span>快节奏街机风格游戏背景音乐（可循环，20-30秒）</li>
+            <li><code>交付</code><span class="arr">→</span>按工作室规范完成最终交付，签署授权协议</li>
+            <li><code>结果</code><span class="arr">→</span>音频资产被参与工作室选中并授权使用</li>
+          </ul>
+        </div>
+        <div class="chips"><span class="chip">Ableton Live</span><span class="chip">Music</span><span class="chip">Commissioned Work</span><span class="chip">GGJ</span></div>
+      </div>
+    </article>
+
+    <div class="section-header">Sound Design Portfolio</div>
+
+    <!-- 03 冰与铁 -->
+    <article class="track" style="--i:3">
+      <div class="rail"><div class="no"><small>0</small>3</div><div class="meter"><span></span><span></span><span></span><span></span></div></div>
       <div class="body">
         <h2 class="title"><span class="cn">《冰与铁》</span>—— HP 驱动的动态战斗音频系统</h2>
         <div class="stack">Wwise × Unity</div>
         <p class="desc">基于 HP 与伤害参数构建 RTPC 驱动的战斗音频系统，实现命中反馈与音乐情绪的动态演变。</p>
-
         <div class="block">
           <div class="block__h">System Implementation</div>
           <ul class="patch">
@@ -179,44 +209,34 @@
           <div class="block__h">Design Goal</div>
           <p>让音频实时响应数值变化，强化玩家对战斗强度及对峙状态（危险或胜利在望）的感知。</p>
         </div>
-
         <div class="chips"><span class="chip">Wwise</span><span class="chip">Unity</span><span class="chip">State</span><span class="chip">RTPC</span><span class="chip">Interactive Music</span></div>
-
         <div class="embeds">
           <div class="embed-block">
             <div class="embed-label">Demo — Dual-track / Victory</div>
-            <div class="embed-wrap">
-              <iframe src="//player.bilibili.com/player.html?bvid=BV1LCEj6XEJQ&autoplay=0" allowfullscreen></iframe>
-            </div>
+            <div class="embed-wrap"><iframe src="//player.bilibili.com/player.html?bvid=BV1LCEj6XEJQ&autoplay=0" allowfullscreen></iframe></div>
           </div>
           <div class="embed-block">
             <div class="embed-label">Demo — Defeat</div>
-            <div class="embed-wrap">
-              <iframe src="//player.bilibili.com/player.html?bvid=BV1SdEj6yEqi&autoplay=0" allowfullscreen></iframe>
-            </div>
+            <div class="embed-wrap"><iframe src="//player.bilibili.com/player.html?bvid=BV1SdEj6yEqi&autoplay=0" allowfullscreen></iframe></div>
           </div>
           <div class="embed-block">
             <div class="embed-label">Demo — Victory</div>
-            <div class="embed-wrap">
-              <iframe src="//player.bilibili.com/player.html?bvid=BV1gREj6LET2&autoplay=0" allowfullscreen></iframe>
-            </div>
+            <div class="embed-wrap"><iframe src="//player.bilibili.com/player.html?bvid=BV1gREj6LET2&autoplay=0" allowfullscreen></iframe></div>
           </div>
         </div>
-
         <div class="cues" style="margin-top:16px">
           <a class="cue cue--doc" href="Combat_Demo%20Source%20List.pdf"><span class="ico">↗</span>Source list</a>
         </div>
       </div>
     </article>
 
-    <!-- 02 脚步环境 -->
-    <article class="track" style="--i:2">
-      <div class="rail"><div class="no"><small>0</small>2</div><div class="meter"><span></span><span></span><span></span><span></span></div></div>
+    <!-- 04 脚步环境 -->
+    <article class="track" style="--i:4">
+      <div class="rail"><div class="no"><small>0</small>4</div><div class="meter"><span></span><span></span><span></span><span></span></div></div>
       <div class="body">
         <h2 class="title">基于 RTPC 的环境与脚步交互音频系统</h2>
         <div class="stack">Wwise × Unity</div>
         <p class="desc">构建基于地面材质与空间距离的交互音频系统，实现脚步声与环境音的动态变化。</p>
-
         <div class="block">
           <div class="block__h">System Implementation</div>
           <ul class="patch">
@@ -229,80 +249,60 @@
           <div class="block__h">Design Goal</div>
           <p>通过音频反馈强化玩家对空间与物理边界的感知，利用脚步声音高变化提供直观感性的距离提示，提升交互的功能性。</p>
         </div>
-
         <div class="chips"><span class="chip">Wwise</span><span class="chip">Unity</span><span class="chip">Switch Group</span><span class="chip">RTPC</span><span class="chip">Ambience</span></div>
-
         <div class="embeds">
           <div class="embed-block">
             <div class="embed-label">Demo</div>
-            <div class="embed-wrap">
-              <iframe src="//player.bilibili.com/player.html?bvid=BV1cVE76AEem&autoplay=0" allowfullscreen></iframe>
-            </div>
+            <div class="embed-wrap"><iframe src="//player.bilibili.com/player.html?bvid=BV1cVE76AEem&autoplay=0" allowfullscreen></iframe></div>
           </div>
           <div class="embed-block">
             <div class="embed-label">Demo — w/ Wwise Profiler</div>
-            <div class="embed-wrap">
-              <iframe src="//player.bilibili.com/player.html?bvid=BV1vCEj6XEdc&autoplay=0" allowfullscreen></iframe>
-            </div>
+            <div class="embed-wrap"><iframe src="//player.bilibili.com/player.html?bvid=BV1vCEj6XEdc&autoplay=0" allowfullscreen></iframe></div>
           </div>
         </div>
-
         <div class="cues" style="margin-top:16px">
           <a class="cue cue--doc" href="Wwise_Unity%20Demo%20Source%20List.pdf"><span class="ico">↗</span>Source list</a>
         </div>
       </div>
     </article>
 
-    <!-- 03 赛博朋克 2077 -->
-    <article class="track" style="--i:3">
-      <div class="rail"><div class="no"><small>0</small>3</div><div class="meter"><span></span><span></span><span></span><span></span></div></div>
+    <!-- 05 赛博朋克 -->
+    <article class="track" style="--i:5">
+      <div class="rail"><div class="no"><small>0</small>5</div><div class="meter"><span></span><span></span><span></span><span></span></div></div>
       <div class="body">
         <h2 class="title">基于拟音录音的慢镜头音效重设计</h2>
         <div class="stack">Sci-Fi Scene Sound Redesign</div>
-        <p class="desc">使用 Ableton Live Operator 制作噪音和 Sub Down. 使用日常用品拟音制作射击和子弹前进效果。</p>
-
-        <div class="block">
-          <div class="block__h">Credits</div>
-          <p>素材来源：自制</p>
-          <p>视频来源：@ GameSpot：https://youtu.be/DvVjkqB3LH0?si=w143sZpdprAHSD19</p>
-        </div>
-
+        <p class="desc">针对赛博朋克风格慢镜头战斗场景的音效重设计。所有声音均通过拟音录音与合成自制，未使用任何外部素材库。Original footage from GameSpot.</p>
         <div class="block">
           <div class="block__h">Design Focus</div>
           <ul class="patch">
-            <li><code>素材叠加</code><span class="arr">→</span>多层自制素材经 EQ 塑形与 Pitch & Formant / AMP 处理后叠加合成。</li>
-            <li><code>Operator调制</code><span class="arr">→</span>结合效果器调制噪音和具有冲击力的 Sub Down。</li>
+            <li><code>拟音录音</code><span class="arr">→</span>使用日常物品录制射击与子弹穿行效果，经 EQ、Pitch &amp; Formant 及 AMP 处理塑形。</li>
+            <li><code>Operator 合成</code><span class="arr">→</span>结合效果器调制噪音层与具有冲击力的 Sub Down，强化机械质感。</li>
+            <li><code>慢镜头处理</code><span class="arr">→</span>拉伸瞬态与延长混响尾音，放大撞击与碎裂细节，在慢速画面中强化张力。</li>
           </ul>
         </div>
-
-        <div class="chips"><span class="chip">Ableton Live</span><span class="chip">Sound Redesign</span></div>
-
+        <div class="chips"><span class="chip">Ableton Live</span><span class="chip">Foley</span><span class="chip">Synthesis</span><span class="chip">Sound Redesign</span></div>
         <div class="embeds">
           <div class="embed-block">
             <div class="embed-label">Demo</div>
-            <div class="embed-wrap">
-              <iframe src="//player.bilibili.com/player.html?bvid=BV17QN76FERR&autoplay=0" allowfullscreen></iframe>
-            </div>
+            <div class="embed-wrap"><iframe src="//player.bilibili.com/player.html?bvid=BV17QN76FERR&autoplay=0" allowfullscreen></iframe></div>
           </div>
         </div>
       </div>
     </article>
 
-
-    <!-- 04 长剑 -->
-    <article class="track" style="--i:4">
-      <div class="rail"><div class="no"><small>0</small>4</div><div class="meter"><span></span><span></span><span></span><span></span></div></div>
+    <!-- 06 长剑 -->
+    <article class="track" style="--i:6">
+      <div class="rail"><div class="no"><small>0</small>6</div><div class="meter"><span></span><span></span><span></span><span></span></div></div>
       <div class="body">
         <h2 class="title">长剑挥击音效设计与集成</h2>
         <div class="stack">Sword Combat SFX · Wwise × Unity</div>
         <p class="desc">五组独立挥击动作的音效设计与引擎集成，基于 Animation Event 驱动 Wwise 精确触发。</p>
-
         <div class="block">
           <div class="block__h">Credits</div>
           <p>素材来源：GDC Game Audio Bundle / Pixabay / Mixkit / Soundbible / Soundly Free</p>
           <p>模型来源：FreeSword Animations · EEJANAI Team · Unity Asset Store (Free)</p>
         </div>
-
         <div class="block">
           <div class="block__h">Design Focus</div>
           <ul class="patch">
@@ -311,28 +311,23 @@
             <li><code>Integration</code><span class="arr">→</span>Animation Event → C# → Wwise Event，实现音效与动画关键帧的精确同步。</li>
           </ul>
         </div>
-
         <div class="chips"><span class="chip">Wwise</span><span class="chip">Unity</span><span class="chip">Reaper</span><span class="chip">Animation Event</span><span class="chip">Sound Design</span></div>
-
         <div class="embeds">
           <div class="embed-block">
             <div class="embed-label">Demo</div>
-            <div class="embed-wrap">
-              <iframe src="//player.bilibili.com/player.html?bvid=BV1FuEm67EWu&autoplay=0" allowfullscreen></iframe>
-            </div>
+            <div class="embed-wrap"><iframe src="//player.bilibili.com/player.html?bvid=BV1FuEm67EWu&autoplay=0" allowfullscreen></iframe></div>
           </div>
         </div>
       </div>
     </article>
 
-    <!-- 05 绯雪 -->
-    <article class="track" style="--i:5">
-      <div class="rail"><div class="no"><small>0</small>5</div><div class="meter"><span></span><span></span><span></span><span></span></div></div>
+    <!-- 07 绯雪 -->
+    <article class="track" style="--i:7">
+      <div class="rail"><div class="no"><small>0</small>7</div><div class="meter"><span></span><span></span><span></span><span></span></div></div>
       <div class="body">
         <h2 class="title">混合合成 ——<span class="cn">《鸣潮》</span>绯雪技能音效重设计</h2>
         <div class="stack">Hybrid Synthesis · In-The-Box</div>
-        <p class="desc">聚焦全板内 (In-The-Box) 混合合成声音重设计。核心材质（冰雪、铃铛）选用精选预设，其余元素（Whoosh, Ice Crack, Pulse Wave, Burst, Eject）经 Ableton Live 内置工具与外部合成器自制调制，部分融合预设低音增强冲击力。通过声音叠加、多参数自动化 (Automation) 与滤波扫频 (Filter Sweep)，塑造冰系技能在蓄力、弹射、爆发阶段的声压感与物理冲击力。</p>
-
+        <p class="desc">聚焦全板内 (In-The-Box) 混合合成声音重设计。核心材质（冰雪、铃铛）选用精选预设，其余元素经 Ableton Live 内置工具与外部合成器自制调制。通过声音叠加、多参数自动化与滤波扫频，塑造冰系技能在蓄力、弹射、爆发阶段的声压感与物理冲击力。</p>
         <div class="block">
           <div class="block__h">Toolchain</div>
           <p>Ableton Live (Built-in Devices) · Vital · Surge XT · OB-Xd &nbsp;|&nbsp; 视频画面源自 IGN 官方演示片段</p>
@@ -344,28 +339,23 @@
             <li><code>空间与动态平衡</code><span class="arr">→</span>以 Glue Compressor、Saturator、Reverb 粘合元素层，统一空间感；提升子编组饱和度，在提升整体响度时不掩蔽高频细节。</li>
           </ul>
         </div>
-
         <div class="chips"><span class="chip">Ableton Live</span><span class="chip">Sound Design</span><span class="chip">Layering</span><span class="chip">Synthesis</span></div>
-
         <div class="embeds">
           <div class="embed-block">
             <div class="embed-label">Demo</div>
-            <div class="embed-wrap">
-              <iframe src="//player.bilibili.com/player.html?bvid=BV18dEj6yEGL&autoplay=0" allowfullscreen></iframe>
-            </div>
-          </div>   
+            <div class="embed-wrap"><iframe src="//player.bilibili.com/player.html?bvid=BV18dEj6yEGL&autoplay=0" allowfullscreen></iframe></div>
+          </div>
         </div>
       </div>
     </article>
 
-    <!-- 06 战斧 -->
-    <article class="track" style="--i:6">
-      <div class="rail"><div class="no"><small>0</small>6</div><div class="meter"><span></span><span></span><span></span><span></span></div></div>
+    <!-- 08 战斧 -->
+    <article class="track" style="--i:8">
+      <div class="rail"><div class="no"><small>0</small>8</div><div class="meter"><span></span><span></span><span></span><span></span></div></div>
       <div class="body">
         <h2 class="title">中世纪冷兵器战斧音效设计</h2>
         <div class="stack">Medieval Battle Axe · Ref. For Honor</div>
         <p class="desc">以《For Honor》音效审美为基准，解构战斧音效音频层级，设计冷兵器物理动态。</p>
-
         <div class="block">
           <div class="block__h">Design Focus</div>
           <ul class="patch">
@@ -374,32 +364,26 @@
             <li><code>动态与动能模拟</code><span class="arr">→</span>以自动化控制与包络修剪模拟战斧挥动的动能变化与速度感。</li>
           </ul>
         </div>
-
         <div class="chips"><span class="chip">Ableton Live</span><span class="chip">Sound Design</span><span class="chip">Layering</span></div>
-
         <div class="embeds">
           <div class="embed-block">
             <div class="embed-label">Demo</div>
-            <div class="embed-wrap">
-              <iframe src="//player.bilibili.com/player.html?bvid=BV1tfEj6kEhM&autoplay=0" allowfullscreen></iframe>
-            </div>
+            <div class="embed-wrap"><iframe src="//player.bilibili.com/player.html?bvid=BV1tfEj6kEhM&autoplay=0" allowfullscreen></iframe></div>
           </div>
         </div>
-
         <div class="cues" style="margin-top:16px">
           <a class="cue cue--doc" href="Battle_Axe_SourceList.pdf"><span class="ico">↗</span>Source list</a>
         </div>
       </div>
     </article>
 
-    <!-- 07 古墓丽影 -->
-    <article class="track" style="--i:7">
-      <div class="rail"><div class="no"><small>0</small>7</div><div class="meter"><span></span><span></span><span></span><span></span></div></div>
+    <!-- 09 古墓丽影 -->
+    <article class="track" style="--i:9">
+      <div class="rail"><div class="no"><small>0</small>9</div><div class="meter"><span></span><span></span><span></span><span></span></div></div>
       <div class="body">
         <h2 class="title">动作场景音效重设计</h2>
         <div class="stack">Cinematic Sound Redesign</div>
         <p class="desc">重构动作场景音效层级与空间响应，强化叙事感与沉浸感。</p>
-
         <div class="block">
           <div class="block__h">Design Focus</div>
           <ul class="patch">
@@ -409,32 +393,28 @@
             <li><code>场景氛围</code><span class="arr">→</span>以金属感与爆发冲击的枪声、闷响火声与火星喷溅、变换风声及内外混响，营造危险阴冷的复仇基调。</li>
           </ul>
         </div>
-
         <div class="chips"><span class="chip">Ableton Live</span><span class="chip">Sound Design</span><span class="chip">Layering</span></div>
-
         <div class="embeds">
           <div class="embed-block">
             <div class="embed-label">Demo</div>
-            <div class="embed-wrap">
-              <iframe src="//player.bilibili.com/player.html?bvid=BV1F5E76aEYN&autoplay=0" allowfullscreen></iframe>
-            </div>
+            <div class="embed-wrap"><iframe src="//player.bilibili.com/player.html?bvid=BV1F5E76aEYN&autoplay=0" allowfullscreen></iframe></div>
           </div>
         </div>
-
         <div class="cues" style="margin-top:16px">
           <a class="cue cue--doc" href="Tomb%20Raider%20Demo%20Source%20List.pdf"><span class="ico">↗</span>Source list</a>
         </div>
       </div>
     </article>
 
-    <!-- 08 音乐 -->
-    <article class="track" style="--i:8">
-      <div class="rail"><div class="no"><small>0</small>8</div><div class="meter"><span></span><span></span><span></span><span></span></div></div>
+    <div class="section-header">Music</div>
+
+    <!-- 10 音乐 -->
+    <article class="track" style="--i:10">
+      <div class="rail"><div class="no"><small>1</small>0</div><div class="meter"><span></span><span></span><span></span><span></span></div></div>
       <div class="body">
         <h2 class="title">原创游戏音乐片段</h2>
         <div class="stack">Original Music · Combat Loop / Narrative Piano</div>
         <p class="desc">创作节奏驱动的复古风战斗循环音乐 (8-bit) 与情绪导向的叙事钢琴音乐。</p>
-
         <div class="chips"><span class="chip">Reaper</span><span class="chip">GarageBand</span></div>
       </div>
     </article>
@@ -447,12 +427,11 @@
       <p>开放游戏音频 / 交互音频相关机会与合作 · Open to game-audio roles &amp; collaboration.</p>
       <div class="links">
         <a href="#">LinkedIn ↗</a>
-        <a href="#">Email 844871692@qq.com↗</a>
+        <a href="mailto:844871692@qq.com">Email ↗</a>
       </div>
     </div>
     <div class="colophon">Ember — Game Audio &amp; Sound Design</div>
   </footer>
 </div>
-
 </body>
 </html>
