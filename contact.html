@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact · 熊晓贝</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=Archivo+Expanded:wght@700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="wrap">
+    <a href="index.html" class="nav-logo">EMBER XIONG</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html" class="active">Contact</a>
+      </div>
+      <div class="nav-lang"><a href="contact_en.html">EN</a></div>
+      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+  <main>
+    <div class="contact-box">
+      <h2>Let's work together.</h2>
+      <p class="sub">欢迎联系我洽谈自由项目 / 合作 / 委托需求：</p>
+      <a class="contact-email" href="mailto:emberxb@outlook.com">emberxb@outlook.com</a>
+
+      <form class="contact-form" action="https://formspree.io/f/yourFormID" method="POST">
+        <div class="field">
+          <label for="name">Name 姓名</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="field">
+          <label for="email">Email 邮箱</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="field">
+          <label for="message">Message 留言</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="form-submit">Send 发送</button>
+        <div class="form-note">留言会直接发送到我的邮箱，我会尽快回复。</div>
+      </form>
+    </div>
+  </main>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap"><div class="colophon">Ember Xiong — Game Sound Designer</div></div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

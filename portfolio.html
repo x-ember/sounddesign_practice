@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio · 熊晓贝</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=Archivo+Expanded:wght@700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="wrap">
+    <a href="index.html" class="nav-logo">EMBER XIONG</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html" class="active">Portfolio</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-lang"><a href="portfolio_en.html">EN</a></div>
+      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+  <header class="page-header">
+    <div class="page-eyebrow">Selected Works</div>
+    <h1 class="page-title">声音与系统，<br>为玩法而生。</h1>
+  </header>
+
+  <main>
+
+    <!-- 01 CIGA / GGJ -->
+    <article class="track" style="--i:1">
+      <div class="rail"><div class="no"><small>0</small>1</div><div class="meter"><span></span><span></span><span></span><span></span></div></div>
+      <div class="body">
+        <h2 class="title">CIGA / <span class="accent">GGJ Micro Missions</span></h2>
+        <div class="stack">Game Jam · Commissioned Music</div>
+
+        <div class="subworks">
+          <div class="subwork">
+            <h3><span class="cn">《猫锚猫》</span> <span class="tag">CiGA GameJam 2026</span></h3>
+            <p class="desc">48小时内与程序、美术、策划协作完成完整游戏原型。玩家控制船只与猫猫锚，锚准并救起落水的猫猫。负责游戏全部音乐与音效设计。</p>
+            <div class="block">
+              <div class="block__h">Contribution</div>
+              <ul class="patch">
+                <li><code>音效设计</code><span class="arr">→</span>从零设计游戏所有交互音效，包括碰撞反馈、角色动作与UI音效。</li>
+                <li><code>音乐创作</code><span class="arr">→</span>创作符合游戏基调的背景音乐，配合游戏节奏与视觉风格。</li>
+                <li><code>团队协作</code><span class="arr">→</span>在48小时时间限制内完成交付，与跨职能团队实时沟通迭代。</li>
+              </ul>
+            </div>
+            <div class="chips"><span class="chip">Ableton Live</span><span class="chip">Game Jam</span><span class="chip">Sound Design</span><span class="chip">Music</span></div>
+            <div class="videos">
+              <div class="video-wrap">
+                <div class="video-label">Demo</div>
+                <div class="video-container"><iframe src="//player.bilibili.com/player.html?bvid=BV17BTy66ETz&autoplay=0" allowfullscreen></iframe></div>
+              </div>
+            </div>
+            <div class="cues" style="margin-top:16px">
+              <a class="cue" href="https://www.gmhub.com/game/10353" target="_blank"><span class="ico">↗</span>GMHub 作品页</a>
+            </div>
+          </div>
+
+          <div class="subwork">
+            <h3>GGJ Micro Missions <span class="tag">Selected Audio Creator · 2026</span></h3>
+            <p class="desc">基于工作室需求说明书（Brief）创作可循环背景音乐，在众多提交作品中被选中，获取稿费并签署授权协议。音乐用于一款节奏紧凑的街机风格游戏，需匹配快速弹出目标的游戏能量与节奏。</p>
+            <div class="block">
+              <div class="block__h">Details</div>
+              <ul class="patch">
+                <li><code>类型</code><span class="arr">→</span>快节奏街机风格游戏背景音乐（可循环，20–30秒）</li>
+                <li><code>交付</code><span class="arr">→</span>按工作室规范完成最终交付，签署授权协议</li>
+                <li><code>结果</code><span class="arr">→</span>音频资产被参与工作室选中并授权使用</li>
+              </ul>
+            </div>
+            <div class="chips"><span class="chip">Ableton Live</span><span class="chip">Music</span><span class="chip">Commissioned Work</span><span class="chip">GGJ</span></div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 02 Combat -->
+    <article class="track" style="--i:2">
+      <div class="rail"><div class="no"><small>0</small>2</div><div class="meter"><span></span><span></span><span></span><span></span></div></div>
+      <div class="body">
+        <h2 class="title">交互式<span class="accent">战斗音频系统</span></h2>
+        <div class="stack"><span class="cn">《冰与铁》</span>· Wwise × Unity</div>
+        <p class="desc">基于 HP 与伤害参数构建 RTPC 驱动的战斗音频系统，实现命中反馈与音乐情绪的动态演变。</p>
+        <div class="block">
+          <div class="block__h">System Implementation</div>
+          <ul class="patch">
+            <li><code>RTPC (HP)</code><span class="arr">→</span>垂直分层音乐（Vertical Layering）与侧链避让（Wwise Meter）：随血量阈值激活 Drone 与 Lead，并实现两者间的动态避让。</li>
+            <li><code>RTPC (Damage)</code><span class="arr">→</span>多阶命中反馈（Blend Container）：命中声音从 Normal 到 Broken、Final Blow 的质感演变。</li>
+            <li><code>State (Game State)</code><span class="arr">→</span>全局状态切换：基于胜负分晓状态触发全局静默。</li>
+          </ul>
+        </div>
+        <div class="block">
+          <div class="block__h">Design Goal</div>
+          <p>让音频实时响应数值变化，强化玩家对战斗强度及对峙状态（危险或胜利在望）的感知。</p>
+        </div>
+        <div class="chips"><span class="chip">Wwise</span><span class="chip">Unity</span><span class="chip">State</span><span class="chip">RTPC</span><span class="chip">Interactive Music</span></div>
+        <div class="videos">
+          <div class="video-wrap">
+            <div class="video-label">Demo — Dual-track / Victory</div>
+            <div class="video-container"><iframe src="//player.bilibili.com/player.html?bvid=BV1LCEj6XEJQ&autoplay=0" allowfullscreen></iframe></div>
+          </div>
+          <div class="video-wrap">
+            <div class="video-label">Demo — Defeat</div>
+            <div class="video-container"><iframe src="//player.bilibili.com/player.html?bvid=BV1SdEj6yEqi&autoplay=0" allowfullscreen></iframe></div>
+          </div>
+          <div class="video-wrap">
+            <div class="video-label">Demo — Victory</div>
+            <div class="video-container"><iframe src="//player.bilibili.com/player.html?bvid=BV1gREj6LET2&autoplay=0" allowfullscreen></iframe></div>
+          </div>
+        </div>
+        <div class="cues">
+          <a class="cue cue--doc" href="Combat_Demo%20Source%20List.pdf"><span class="ico">↗</span>Source list</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 03 Footstep -->
+    <article class="track" style="--i:3">
+      <div class="rail"><div class="no"><small>0</small>3</div><div class="meter"><span></span><span></span><span></span><span></span></div></div>
+      <div class="body">
+        <h2 class="title">交互式<span class="accent">脚步与环境系统</span></h2>
+        <div class="stack">Wwise × Unity</div>
+        <p class="desc">构建基于地面材质与空间距离的交互音频系统，实现脚步声与环境音的动态变化。</p>
+        <div class="block">
+          <div class="block__h">System Implementation</div>
+          <ul class="patch">
+            <li><code>Switch Group</code><span class="arr">→</span>物理材质反馈：配置四种地面材质（Wood / Grass / Water / Stone），每种 5 个随机变体，消除重复感。</li>
+            <li><code>RTPC (Distance)</code><span class="arr">→</span>空间边界预警：以玩家与区域边界距离实时映射，通过脚步声 Pitch 的线性偏移提供直观的距离听觉反馈。</li>
+            <li><code>Spatial Ambience</code><span class="arr">→</span>差异化声学环境：按区域材质切换环境底噪（Bed），以鸟鸣、风声、地矿回响、水声强化声学指纹。</li>
+          </ul>
+        </div>
+        <div class="block">
+          <div class="block__h">Design Goal</div>
+          <p>通过音频反馈强化玩家对空间与物理边界的感知，利用脚步声音高变化提供直观感性的距离提示，提升交互的功能性。</p>
+        </div>
+        <div class="chips"><span class="chip">Wwise</span><span class="chip">Unity</span><span class="chip">Switch Group</span><span class="chip">RTPC</span><span class="chip">Ambience</span></div>
+        <div class="videos">
+          <div class="video-wrap">
+            <div class="video-label">Demo</div>
+            <div class="video-container"><iframe src="//player.bilibili.com/player.html?bvid=BV1cVE76AEem&autoplay=0" allowfullscreen></iframe></div>
+          </div>
+          <div class="video-wrap">
+            <div class="video-label">Demo — w/ Wwise Profiler</div>
+            <div class="video-container"><iframe src="//player.bilibili.com/player.html?bvid=BV1vCEj6XEdc&autoplay=0" allowfullscreen></iframe></div>
+          </div>
+        </div>
+        <div class="cues">
+          <a class="cue cue--doc" href="Wwise_Unity%20Demo%20Source%20List.pdf"><span class="ico">↗</span>Source list</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 04 Tomb Raider -->
+    <article class="track" style="--i:4">
+      <div class="rail"><div class="no"><small>0</small>4</div><div class="meter"><span></span><span></span><span></span><span></span></div></div>
+      <div class="body">
+        <h2 class="title"><span class="cn">古墓丽影</span> — <span class="accent">音效重设计</span></h2>
+        <div class="stack">Cinematic Sound Redesign</div>
+        <p class="desc">重构动作场景音效层级与空间响应，强化叙事感与沉浸感。</p>
+        <div class="block">
+          <div class="block__h">Design Focus</div>
+          <ul class="patch">
+            <li><code>枪声层级</code><span class="arr">→</span>按高 / 中 / 低频分为四层（Transient · Body×2 · Tail）叠加素材；主要通过变换 Transient 层制作变体。</li>
+            <li><code>脚步声层级</code><span class="arr">→</span>中性脚步声叠加多种材质接触声（Grass / Dirt / Stone / Wood）与衣物摩擦声，配多种变体。</li>
+            <li><code>空间混响</code><span class="arr">→</span>山洞内外混响变化，以及过程中的风声变化。</li>
+            <li><code>场景氛围</code><span class="arr">→</span>以金属感与爆发冲击的枪声、闷响火声与火星喷溅、变换风声及内外混响，营造危险阴冷的复仇基调。</li>
+          </ul>
+        </div>
+        <div class="chips"><span class="chip">Ableton Live</span><span class="chip">Sound Redesign</span><span class="chip">Layering</span></div>
+        <div class="videos">
+          <div class="video-wrap">
+            <div class="video-label">Demo</div>
+            <div class="video-container"><iframe src="//player.bilibili.com/player.html?bvid=BV1F5E76aEYN&autoplay=0" allowfullscreen></iframe></div>
+          </div>
+        </div>
+        <div class="cues">
+          <a class="cue cue--doc" href="Tomb%20Raider%20Demo%20Source%20List.pdf"><span class="ico">↗</span>Source list</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 05 Sound Design & Synthesis -->
+    <article class="track" style="--i:5">
+      <div class="rail"><div class="no"><small>0</small>5</div><div class="meter"><span></span><span></span><span></span><span></span></div></div>
+      <div class="body">
+        <h2 class="title">Sound Design <span class="accent">&amp; Synthesis</span></h2>
+        <div class="stack">Layering · Hybrid Synthesis · Foley</div>
+
+        <div class="subworks">
+          <div class="subwork">
+            <h3>长剑 Long Sword <span class="tag">Wwise × Unity</span></h3>
+            <p class="desc">五组独立挥击动作的音效设计与引擎集成，基于 Animation Event 驱动 Wwise 精确触发。</p>
+            <div class="block">
+              <div class="block__h">Credits</div>
+              <p>素材来源：GDC Game Audio Bundle / Pixabay / Mixkit / Soundbible / Soundly Free</p>
+              <p>模型来源：FreeSword Animations · EEJANAI Team · Unity Asset Store (Free)</p>
+            </div>
+            <div class="block">
+              <div class="block__h">Design Focus</div>
+              <ul class="patch">
+                <li><code>素材叠加</code><span class="arr">→</span>多层素材经 EQ 塑形与 Ring Modulator 金属质感处理后叠加合成。</li>
+                <li><code>变体设计</code><span class="arr">→</span>每组动作的 Whoosh 与 Impact 各含两个变体，通过 Wwise Random Container 随机触发。</li>
+                <li><code>Integration</code><span class="arr">→</span>Animation Event → C# → Wwise Event，实现音效与动画关键帧的精确同步。</li>
+              </ul>
+            </div>
+            <div class="chips"><span class="chip">Wwise</span><span class="chip">Unity</span><span class="chip">Reaper</span><span class="chip">Animation Event</span><span class="chip">Sound Design</span></div>
+            <div class="videos">
+              <div class="video-wrap">
+                <div class="video-label">Demo</div>
+                <div class="video-container"><iframe src="//player.bilibili.com/player.html?bvid=BV1FuEm67EWu&autoplay=0" allowfullscreen></iframe></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="subwork">
+            <h3>AW2 手电筒技能音效 <span class="tag">Synthesis · Foley</span></h3>
+            <p class="desc">技能音效由四层素材构成：Operator制作的具有膨胀收缩动感的低频脉动、Operator制作的模拟闪电放电感的噪音层、拟音录制的电流滋滋声，以及拟音录制的最终爆裂冲击层。</p>
+            <div class="block">
+              <div class="block__h">Design Focus</div>
+              <ul class="patch">
+                <li><code>低频脉动</code><span class="arr">→</span>使用 Operator 结合膨胀/收缩包络制作，赋予技能具有张力感的律动低频。</li>
+                <li><code>放电噪音层</code><span class="arr">→</span>基于 Operator 的噪音层塑形，模仿闪电放电的质感。</li>
+                <li><code>电流拟音</code><span class="arr">→</span>拟音录音叠加，强化电流滋滋作响的听感。</li>
+                <li><code>爆裂拟音</code><span class="arr">→</span>拟音录音塑形，制作最终的爆裂冲击层。</li>
+              </ul>
+            </div>
+            <div class="chips"><span class="chip">Ableton Live</span><span class="chip">Operator</span><span class="chip">Foley</span><span class="chip">Synthesis</span></div>
+            <div class="videos">
+              <div class="video-wrap">
+                <div class="video-label">Demo</div>
+                <div class="video-container"><iframe src="//player.bilibili.com/player.html?bvid=BV1xabX6AEu6&autoplay=0" allowfullscreen></iframe></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="subwork">
+            <h3><span class="cn">绯雪</span> Ice Skill <span class="tag">Hybrid Synthesis · 鸣潮</span></h3>
+            <p class="desc">聚焦全板内（In-The-Box）混合合成的声音重设计。核心材质（冰雪、铃铛）选用精选预设，其余元素经 Ableton Live 内置工具与外部合成器自制调制。通过声音叠加、多参数自动化与滤波扫频，塑造冰系技能在蓄力、弹射、爆发阶段的声压感与物理冲击力。</p>
+            <div class="block">
+              <div class="block__h">Toolchain</div>
+              <p>Ableton Live (Built-in Devices) · Vital · Surge XT · OB-Xd &nbsp;|&nbsp; 视频画面源自 IGN 官方演示片段</p>
+            </div>
+            <div class="block">
+              <div class="block__h">Design Focus</div>
+              <ul class="patch">
+                <li><code>混合合成材质</code><span class="arr">→</span>Operator / Wavetable / Vital / Surge XT 自制合成与预置相融合，构建质感统一、结晶感强烈的冰雪攻击特征。</li>
+                <li><code>空间与动态平衡</code><span class="arr">→</span>以 Glue Compressor、Saturator、Reverb 粘合元素层，统一空间感；提升子编组饱和度，在提升整体响度时不掩蔽高频细节。</li>
+              </ul>
+            </div>
+            <div class="chips"><span class="chip">Ableton Live</span><span class="chip">Sound Design</span><span class="chip">Layering</span><span class="chip">Synthesis</span></div>
+            <div class="videos">
+              <div class="video-wrap">
+                <div class="video-label">Demo</div>
+                <div class="video-container"><iframe src="//player.bilibili.com/player.html?bvid=BV18dEj6yEGL&autoplay=0" allowfullscreen></iframe></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Additional Work -->
+    <div class="additional">
+      <div class="label">Additional Work</div>
+      <div class="additional-card">
+        <h3>赛博朋克2077 <span class="tag">Sound Redesign</span></h3>
+        <p>针对赛博朋克风格慢镜头战斗场景的音效重设计。所有声音均通过拟音录音与合成自制，未使用任何外部素材库。Original footage from GameSpot.</p>
+        <div class="video-container"><iframe src="//player.bilibili.com/player.html?bvid=BV17QN76FERR&autoplay=0" allowfullscreen></iframe></div>
+      </div>
+    </div>
+
+    <div class="social-footer">
+      <span class="label">Follow</span>
+      <a class="social-icon" href="#" target="_blank" aria-label="Bilibili" title="Bilibili">
+        <svg viewBox="0 0 24 24"><path d="M17.6 4.5 15.1 7h-6.2L6.4 4.5a1 1 0 0 0-1.5 1.3L6.6 7.3H5.5A3.5 3.5 0 0 0 2 10.8v7A3.5 3.5 0 0 0 5.5 21.3h13A3.5 3.5 0 0 0 22 17.8v-7a3.5 3.5 0 0 0-3.5-3.5h-1.1l1.7-1.5a1 1 0 0 0-1.5-1.3ZM5.5 9.8h13a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-13a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1Zm2.3 2.4a1.1 1.1 0 0 0-1.1 1.1v1.6a1.1 1.1 0 1 0 2.2 0v-1.6a1.1 1.1 0 0 0-1.1-1.1Zm8.4 0a1.1 1.1 0 0 0-1.1 1.1v1.6a1.1 1.1 0 1 0 2.2 0v-1.6a1.1 1.1 0 0 0-1.1-1.1Z"/></svg>
+      </a>
+      <a class="social-icon" href="#" target="_blank" aria-label="YouTube" title="YouTube">
+        <svg viewBox="0 0 24 24"><path d="M22 12s0-3.4-.4-5a3.1 3.1 0 0 0-2.2-2.2C17.8 4.4 12 4.4 12 4.4s-5.8 0-7.4.4A3.1 3.1 0 0 0 2.4 7C2 8.6 2 12 2 12s0 3.4.4 5a3.1 3.1 0 0 0 2.2 2.2c1.6.4 7.4.4 7.4.4s5.8 0 7.4-.4a3.1 3.1 0 0 0 2.2-2.2c.4-1.6.4-5 .4-5ZM10 15.4V8.6l6 3.4Z"/></svg>
+      </a>
+    </div>
+
+  </main>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap"><div class="colophon">Ember Xiong — Game Sound Designer</div></div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
