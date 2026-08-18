@@ -93,7 +93,8 @@
         <div class="block">
           <div class="block__h">System Implementation</div>
           <ul class="patch">
-            <li><code>RTPC (HP)</code><span class="arr">→</span>Vertical music layering with sidechain ducking (Wwise Meter): Drone and Lead layers activate at HP thresholds, ducking against each other dynamically.</li>
+            <li><code>RTPC (HP Balance)</code><span class="arr">→</span>Drone and Lead layer volumes are automated in real time based on relative HP advantage — the leading side plays louder while the other is pulled back.</li>
+            <li><code>Wwise Meter</code><span class="arr">→</span>Sidechain ducking between the two music layers, keeping them from masking each other when both are active.</li>
             <li><code>RTPC (Damage)</code><span class="arr">→</span>Multi-stage hit feedback (Blend Container): hit sounds evolve from Normal to Broken to Final Blow.</li>
             <li><code>State (Game State)</code><span class="arr">→</span>Global state switching: triggers full audio mute on win/loss resolution.</li>
           </ul>
