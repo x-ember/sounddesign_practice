@@ -93,8 +93,8 @@
         <div class="block">
           <div class="block__h">System Implementation</div>
           <ul class="patch">
-            <li><code>RTPC (HP Balance)</code><span class="arr">→</span>Drone 与 Lead 两层音乐的音量按双方 HP 的相对优势实时自动化——占优的一方声音更响，另一方被压低。</li>
-            <li><code>Wwise Meter</code><span class="arr">→</span>两层音乐间的侧链避让（Sidechain Ducking），避免两者同时响起时相互掩蔽。</li>
+            <li><code>RTPC (HP Balance)</code><span class="arr">→</span>Drone 与 Lead 两层分别实时跟随各自对应的 HP——Drone 音量绑定 Player HP，Lead 音量绑定 Monster HP。</li>
+            <li><code>Wwise Meter (跨总线侧链)</code><span class="arr">→</span>各总线的 Meter 探测结果输出为 RTPC，压低对方总线音量——只要任意一方变响，另一方就会自动避让，与 HP 数值本身无关。</li>
             <li><code>RTPC (Damage)</code><span class="arr">→</span>多阶命中反馈（Blend Container）：命中声音从 Normal 到 Broken、Final Blow 的质感演变。</li>
             <li><code>State (Game State)</code><span class="arr">→</span>全局状态切换：基于胜负分晓状态触发全局静默。</li>
           </ul>
