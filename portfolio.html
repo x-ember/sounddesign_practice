@@ -93,8 +93,8 @@
         <div class="block">
           <div class="block__h">System Implementation</div>
           <ul class="patch">
-            <li><code>RTPC (HP Balance)</code><span class="arr">→</span>Drone and Lead layer volumes are automated in real time based on relative HP advantage — the leading side plays louder while the other is pulled back.</li>
-            <li><code>Wwise Meter</code><span class="arr">→</span>Sidechain ducking between the two music layers, keeping them from masking each other when both are active.</li>
+            <li><code>RTPC (HP Balance)</code><span class="arr">→</span>Drone and Lead each track their own combatant's HP in real time — Drone's volume follows Player HP, Lead's follows Monster HP.</li>
+            <li><code>Wwise Meter (Cross-bus Sidechain)</code><span class="arr">→</span>Each bus's Meter output drives an RTPC on the opposite bus's volume, so Drone and Lead duck one another automatically whenever either gets loud — independent of HP.</li>
             <li><code>RTPC (Damage)</code><span class="arr">→</span>Multi-stage hit feedback (Blend Container): hit sounds evolve from Normal to Broken to Final Blow.</li>
             <li><code>State (Game State)</code><span class="arr">→</span>Global state switching: triggers full audio mute on win/loss resolution.</li>
           </ul>
